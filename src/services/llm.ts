@@ -94,12 +94,29 @@ export async function queryFoodCalories(foodName: string): Promise<string> {
       role: 'user',
       parts: [
         {
-          text: `Please provide the calorie content for "${foodName}". Return the information in the following format:
+          text: `Please provide detailed nutritional information for "${foodName}". Return the information in the following format:
 
 **Food Name:** [name]
-**Calories:** [number] kcal per 100g (or per serving if more appropriate)
-**Serving Size:** [typical serving size]
-**Nutritional Notes:** [brief notes about the food's nutritional value]
+
+## Nutritional Information Table
+
+| Nutrient | Amount per 100g | Daily Value % |
+|----------|----------------|---------------|
+| **Calories** | [number] kcal | [%] |
+| **Protein** | [number] g | [%] |
+| **Carbohydrates** | [number] g | [%] |
+| **Fat** | [number] g | [%] |
+| **Fiber** | [number] g | [%] |
+| **Sugar** | [number] g | [%] |
+
+**Typical Serving Size:** [e.g., 1 medium apple (182g), 1 cup (240ml), etc.]
+
+**Total Calories per Serving:** [calculated calories for typical serving]
+
+**Nutritional Highlights:**
+- [Key nutritional benefits]
+- [Important vitamins/minerals]
+- [Health considerations]
 
 If the food name is unclear or you're not sure, provide your best estimate and mention the uncertainty.`,
         },
@@ -120,14 +137,31 @@ export async function recognizeFoodFromImage(imageBase64: string, mimeType: stri
       role: 'user',
       parts: [
         {
-          text: `Please analyze this food image and provide calorie information. Return the information in the following format:
+          text: `Please analyze this food image and provide detailed nutritional information. Return the information in the following format:
 
 **Food Name:** [identified food name]
-**Calories:** [estimated number] kcal per 100g (or per serving if more appropriate)
-**Serving Size:** [typical serving size]
-**Nutritional Notes:** [brief notes about the food's nutritional value]
 
-If you can identify multiple food items, list them separately. If you're uncertain about the identification, please mention it.`,
+## Nutritional Information Table
+
+| Nutrient | Amount per 100g | Daily Value % |
+|----------|----------------|---------------|
+| **Calories** | [number] kcal | [%] |
+| **Protein** | [number] g | [%] |
+| **Carbohydrates** | [number] g | [%] |
+| **Fat** | [number] g | [%] |
+| **Fiber** | [number] g | [%] |
+| **Sugar** | [number] g | [%] |
+
+**Typical Serving Size:** [e.g., 1 medium apple (182g), 1 cup (240ml), etc.]
+
+**Total Calories per Serving:** [calculated calories for typical serving]
+
+**Nutritional Highlights:**
+- [Key nutritional benefits]
+- [Important vitamins/minerals]
+- [Health considerations]
+
+If you can identify multiple food items, list them separately with their own tables. If you're uncertain about the identification, please mention it.`,
         },
         {
           inlineData: {

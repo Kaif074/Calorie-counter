@@ -204,12 +204,12 @@ export default function CalorieConverter() {
             {result && (
               <Card className="bg-primary/5 border-primary/20 animate-fade-in">
                 <CardHeader>
-                  <CardTitle className="text-xl text-primary">
-                    Calorie Information
+                  <CardTitle className="text-xl xl:text-2xl text-primary flex items-center gap-2">
+                    📊 Nutritional Analysis
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="prose prose-sm xl:prose-base max-w-none dark:prose-invert">
+                  <div className="prose prose-sm xl:prose-base max-w-none dark:prose-invert prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground">
                     <Streamdown>{result}</Streamdown>
                   </div>
                 </CardContent>

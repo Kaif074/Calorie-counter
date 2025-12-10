@@ -15,23 +15,27 @@ A simple and efficient tool that allows users to quickly look up the calorie con
 
 ### 3.3 Calorie Display
 - Display the calorie content of the entered or recognized food item
-- Show calorie value per standard serving size (e.g., per 100g or per piece)
-- Display results clearly and prominently after user submits the query or uploads a photo
+- Show calorie value per standard serving size (e.g., per 100g or per piece)\n- Display results clearly and prominently after user submits the query or uploads a photo
 
 ### 3.4 Search Functionality\n- Include a search button to trigger the calorie lookup
 - Support Enter key submission for quick access
 
+### 3.5 Calorie Analysis Table
+- Display a summary table after analyzing the food items
+- Table should include columns for: Food Name, Serving Size, Calories, Protein, Carbohydrates, Fat\n- Show total calories at the bottom of the table
+- Support multiple food entries with cumulative total calculation
+
 ## 4. Design Style
 
-### 4.1 Color Scheme
-- Primary color: Fresh green (#4CAF50) representing health and nutrition\n- Secondary color: Light gray (#F5F5F5) for background
-- Accent color: Orange (#FF9800) for calorie values to draw attention
-\n### 4.2 Visual Details
-- Rounded corners: 8px for input fields and buttons, creating a friendly appearance
-- Button style: Solid fill with subtle hover effect (slight darkening)
+### 4.1 Color Scheme\n- Primary color: Fresh green (#4CAF50) representing health and nutrition
+- Secondary color: Light gray (#F5F5F5) for background
+- Accent color: Orange (#FF9800) for calorie values to draw attention\n
+### 4.2 Visual Details
+- Rounded corners: 8px for input fields and buttons, creating a friendly appearance\n- Button style: Solid fill with subtle hover effect (slight darkening)
 - Icon style: Simple line icons for search and camera functionality
-
+- Table style: Clean borders with alternating row colors for better readability\n
 ### 4.3 Layout
 - Centered card-based layout with the input field and photo upload button prominently displayed at the top
 - Result section below the input area with clear visual separation
+- Analysis table positioned below individual results with proper spacing
 - Clean spacing between elements for easy readability
