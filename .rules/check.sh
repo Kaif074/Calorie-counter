@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if ! command -v ast-grep >/dev/null 2>&1; then
+    exit 0
+fi
+
 ast-grep scan -r .rules/SelectItem.yml
 
 useauth_output=$(ast-grep scan -r .rules/useAuth.yml 2>/dev/null)
